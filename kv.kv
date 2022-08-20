@@ -1,0 +1,3478 @@
+#:import Factory kivy.factory.Factory
+
+#Всплывающее окно Основ
+<Bases@Popup>
+    auto_dismiss: True
+    title: 'Основы'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+
+            cols: 1
+            spacing: 5
+
+            size: root.width, root.height
+#            row_default_height: 150
+#            row_force_default: True
+#            center: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 PREMIUM'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[1]
+                    MDTextField:
+                        id: name_input1
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 PREMIUM', app.new_files_nail[1], name_input1.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 PREMIUM'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[5]
+                    MDTextField:
+                        id: name_input2
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 PREMIUM', app.new_files_nail[5], name_input2.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[4]
+                    MDTextField:
+                        id: name_input3
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3', app.new_files_nail[5], name_input3.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[3]
+                    MDTextField:
+                        id: name_input4
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4', app.new_files_nail[3], name_input4.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[2]
+                    MDTextField:
+                        id: name_input5
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5', app.new_files_nail[2], name_input5.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Педикюр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_files_nail[0]
+                    MDTextField:
+                        id: name_input6
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6', app.new_files_nail[0], name_input6.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Диск D1-S'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[2]
+                    MDTextField:
+                        id: name_inputS
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('D1-S', app.new_Pedicure_discs[2], name_inputS.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Диск D1-M'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[1]
+                    MDTextField:
+                        id: name_inputM
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('D1-M', app.new_Pedicure_discs[1], name_inputM.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Диск D1-L'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[0]
+                    MDTextField:
+                        id: name_inputL
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('D1-L', app.new_Pedicure_discs[0], name_inputL.text)
+
+#Всплывающее окно Тонких файлов
+<Files@Popup>
+
+    auto_dismiss: True
+    title: 'Файлы тонкие'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+            size: root.width, root.height
+            #row_default_height: 150
+            #row_force_default: True
+            #center: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B1 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B1 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Светлые 180гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[9]
+                    MDTextField:
+                        id: name_inputB1_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[9], name_inputB1_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B2 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[3]
+                    MDTextField:
+                        id: name_inputB2_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[3], name_inputB2_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[3]
+                    MDTextField:
+                        id: name_inputB2_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[3], name_inputB2_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[3]
+                    MDTextField:
+                        id: name_inputB2_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[3], name_inputB2_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B2 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[6]
+                    MDTextField:
+                        id: name_inputB2_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[6], name_inputB2_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[6]
+                    MDTextField:
+                        id: name_inputB2_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[6], name_inputB2_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[6]
+                    MDTextField:
+                        id: name_inputB2_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[6], name_inputB2_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B3 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[4]
+                    MDTextField:
+                        id: name_inputB3_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[4], name_inputB3_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[4]
+                    MDTextField:
+                        id: name_inputB3_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[4], name_inputB3_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[4]
+                    MDTextField:
+                        id: name_inputB3_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[4], name_inputB3_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B3 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[0]
+                    MDTextField:
+                        id: name_inputB3_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[0], name_inputB3_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[0]
+                    MDTextField:
+                        id: name_inputB3_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[0], name_inputB3_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[0]
+                    MDTextField:
+                        id: name_inputB3_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[0], name_inputB3_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B4 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Темные Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Темные Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B4 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Светлые Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B4 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[10]
+                    MDTextField:
+                        id: name_inputB4_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B4 Светлые Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[10], name_inputB4_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B5 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[5]
+                    MDTextField:
+                        id: name_inputB5_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[5], name_inputB5_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[5]
+                    MDTextField:
+                        id: name_inputB5_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[5], name_inputB5_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[5]
+                    MDTextField:
+                        id: name_inputB5_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[5], name_inputB5_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B5 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[7]
+                    MDTextField:
+                        id: name_inputB5_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[7], name_inputB5_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[7]
+                    MDTextField:
+                        id: name_inputB5_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[7], name_inputB5_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[7]
+                    MDTextField:
+                        id: name_inputB5_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[7], name_inputB5_st_240.text)
+
+
+
+<PedicureFiles@Popup>
+    auto_dismiss: True
+    title: 'Файлы для Педикюра'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+
+            cols: 1
+            spacing: 5
+
+            size: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B6 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tt_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Тонкие 80гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tt_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tt_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Тонкие 320гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tt_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B6 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_st_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Тонкие 80гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_st_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Тонкие 100гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Тонкие 180гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Тонкие 240гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_st_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Тонкие 320гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_st_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск S Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[12]
+                    MDTextField:
+                        id: name_inputS_tt_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Тонкие 80гр', app.new_Pedicure_discs[12], name_inputS_tt_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[12]
+                    MDTextField:
+                        id: name_inputS_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Тонкие 100гр', app.new_Pedicure_discs[12], name_inputS_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[12]
+                    MDTextField:
+                        id: name_inputS_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Тонкие 180гр', app.new_Pedicure_discs[12], name_inputS_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[12]
+                    MDTextField:
+                        id: name_inputS_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Тонкие 240гр', app.new_Pedicure_discs[12], name_inputS_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[12]
+                    MDTextField:
+                        id: name_inputS_tt_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Тонкие 320гр', app.new_Pedicure_discs[12], name_inputS_tt_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск S Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[9]
+                    MDTextField:
+                        id: name_inputS_st_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Тонкие 80гр', app.new_Pedicure_discs[9], name_inputS_st_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[9]
+                    MDTextField:
+                        id: name_inputS_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Тонкие 100гр', app.new_Pedicure_discs[9], name_inputS_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[9]
+                    MDTextField:
+                        id: name_inputS_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Тонкие 180гр', app.new_Pedicure_discs[9], name_inputS_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[9]
+                    MDTextField:
+                        id: name_inputS_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Тонкие 240гр', app.new_Pedicure_discs[9], name_inputS_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[9]
+                    MDTextField:
+                        id: name_inputS_st_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Тонкие 320гр', app.new_Pedicure_discs[9], name_inputS_st_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск M Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[13]
+                    MDTextField:
+                        id: name_inputM_tt_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Тонкие 80гр', app.new_Pedicure_discs[13], name_inputM_tt_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[13]
+                    MDTextField:
+                        id: name_inputM_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Тонкие 100гр', app.new_Pedicure_discs[13], name_inputM_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[13]
+                    MDTextField:
+                        id: name_inputM_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Тонкие 180гр', app.new_Pedicure_discs[13], name_inputM_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[13]
+                    MDTextField:
+                        id: name_inputM_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Тонкие 240гр', app.new_Pedicure_discs[13], name_inputM_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[13]
+                    MDTextField:
+                        id: name_inputM_tt_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Тонкие 320гр', app.new_Pedicure_discs[13], name_inputM_tt_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск M Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[10]
+                    MDTextField:
+                        id: name_inputM_st_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Тонкие 80гр', app.new_Pedicure_discs[10], name_inputM_st_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[10]
+                    MDTextField:
+                        id: name_inputM_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Тонкие 100гр', app.new_Pedicure_discs[10], name_inputM_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[10]
+                    MDTextField:
+                        id: name_inputM_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Тонкие 180гр', app.new_Pedicure_discs[10], name_inputM_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[10]
+                    MDTextField:
+                        id: name_inputM_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Тонкие 240гр', app.new_Pedicure_discs[10], name_inputM_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[10]
+                    MDTextField:
+                        id: name_inputM_st_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Тонкие 320гр', app.new_Pedicure_discs[10], name_inputM_st_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск L Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[11]
+                    MDTextField:
+                        id: name_inputL_tt_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Тонкие 80гр', app.new_Pedicure_discs[11], name_inputL_tt_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[11]
+                    MDTextField:
+                        id: name_inputL_tt_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Тонкие 100гр', app.new_Pedicure_discs[11], name_inputL_tt_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[11]
+                    MDTextField:
+                        id: name_inputL_tt_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Тонкие 180гр', app.new_Pedicure_discs[11], name_inputL_tt_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[11]
+                    MDTextField:
+                        id: name_inputL_tt_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Тонкие 240гр', app.new_Pedicure_discs[11], name_inputL_tt_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[11]
+                    MDTextField:
+                        id: name_inputL_tt_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Тонкие 320гр', app.new_Pedicure_discs[11], name_inputL_tt_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск L Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Тонкие 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[8]
+                    MDTextField:
+                        id: name_inputL_st_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Тонкие 80гр', app.new_Pedicure_discs[8], name_inputL_st_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Тонкие 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[8]
+                    MDTextField:
+                        id: name_inputL_st_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Тонкие 100гр', app.new_Pedicure_discs[8], name_inputL_st_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Тонкие 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[8]
+                    MDTextField:
+                        id: name_inputL_st_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Тонкие 180гр', app.new_Pedicure_discs[8], name_inputL_st_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Тонкие 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[8]
+                    MDTextField:
+                        id: name_inputL_st_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Тонкие 240гр', app.new_Pedicure_discs[8], name_inputL_st_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Тонкие 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Pedicure_discs[8]
+                    MDTextField:
+                        id: name_inputL_st_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Тонкие 320гр', app.new_Pedicure_discs[8], name_inputL_st_320.text)
+
+<Bafi@Popup>
+    auto_dismiss: True
+    title: 'Бафы'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+
+            cols: 1
+            spacing: 5
+
+            size: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Баф B2'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Bafi[0]
+                    MDTextField:
+                        id: name_input_baf_b2
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Баф B2', app.new_Bafi[0], name_input_baf_b2.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Баф B3'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Bafi[1]
+                    MDTextField:
+                        id: name_input_baf_b3
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Баф B3', app.new_Bafi[1], name_input_baf_b3.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Баф Диск М'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Bafi[2]
+                    MDTextField:
+                        id: name_input_baf_M
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Баф Диск М', app.new_Bafi[2], name_input_baf_M.text)
+
+<FilesPena@Popup>
+
+    auto_dismiss: True
+    title: 'Файлы пена'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+            size: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B1 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[4]
+                    MDTextField:
+                        id: name_inputB1_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Пена 100гр', app.new_FilesPena[4], name_inputB1_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[4]
+                    MDTextField:
+                        id: name_inputB1_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Пена 180гр', app.new_FilesPena[4], name_inputB1_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[4]
+                    MDTextField:
+                        id: name_inputB1_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Темные Пена 240гр', app.new_FilesPena[4], name_inputB1_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B1 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[2]
+                    MDTextField:
+                        id: name_inputB1_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Пена 100гр', app.new_FilesPena[2], name_inputB1_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[2]
+                    MDTextField:
+                        id: name_inputB1_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Пена 180гр', app.new_FilesPena[2], name_inputB1_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B1 Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[2]
+                    MDTextField:
+                        id: name_inputB1_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B1 Светлые Пена 240гр', app.new_FilesPena[2], name_inputB1_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B2 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[0]
+                    MDTextField:
+                        id: name_inputB2_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Пена 100гр', app.new_FilesPena[0], name_inputB2_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[0]
+                    MDTextField:
+                        id: name_inputB2_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Пена 180гр', app.new_FilesPena[0], name_inputB2_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[0]
+                    MDTextField:
+                        id: name_inputB2_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Темные Пена 240гр', app.new_FilesPena[0], name_inputB2_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B2 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[3]
+                    MDTextField:
+                        id: name_inputB2_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Пена 100гр', app.new_FilesPena[3], name_inputB2_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[3]
+                    MDTextField:
+                        id: name_inputB2_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Пена 180гр', app.new_FilesPena[3], name_inputB2_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B2 Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[3]
+                    MDTextField:
+                        id: name_inputB2_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B2 Светлые Пена 240гр', app.new_FilesPena[3], name_inputB2_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B3 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[5]
+                    MDTextField:
+                        id: name_inputB3_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Пена 100гр', app.new_FilesPena[5], name_inputB3_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[5]
+                    MDTextField:
+                        id: name_inputB3_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Пена 180гр', app.new_FilesPena[5], name_inputB3_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[5]
+                    MDTextField:
+                        id: name_inputB3_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Темные Пена 240гр', app.new_FilesPena[5], name_inputB3_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B3 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[6]
+                    MDTextField:
+                        id: name_inputB3_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Пена 100гр', app.new_FilesPena[6], name_inputB3_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[6]
+                    MDTextField:
+                        id: name_inputB3_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Пена 180гр', app.new_FilesPena[6], name_inputB3_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B3 Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[6]
+                    MDTextField:
+                        id: name_inputB3_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B3 Светлые Пена 240гр', app.new_FilesPena[6], name_inputB3_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B5 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[7]
+                    MDTextField:
+                        id: name_inputB5_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Пена 100гр', app.new_FilesPena[7], name_inputB5_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[7]
+                    MDTextField:
+                        id: name_inputB5_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Пена 180гр', app.new_FilesPena[7], name_inputB5_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[7]
+                    MDTextField:
+                        id: name_inputB5_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Темные Пена 240гр', app.new_FilesPena[7], name_inputB5_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B5 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[1]
+                    MDTextField:
+                        id: name_inputB5_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Пена 100гр', app.new_FilesPena[1], name_inputB5_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[1]
+                    MDTextField:
+                        id: name_inputB5_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Пена 180гр', app.new_FilesPena[1], name_inputB5_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B5 Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_FilesPena[1]
+                    MDTextField:
+                        id: name_inputB5_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B5 Светлые Пена 240гр', app.new_FilesPena[1], name_inputB5_sp_240.text)
+
+<PedicureFilesPena@Popup>
+    auto_dismiss: True
+    title: 'Файлы Педикюр Пена'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+            size: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B6 Темные'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Пена 80гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Пена 100гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Пена 180гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Пена 240гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Темные Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[1]
+                    MDTextField:
+                        id: name_inputB6_tp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Темные Пена 320гр', app.new_Removable_files_on_a_thin_basis[1], name_inputB6_tp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'B6 Светлые'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_sp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Пена 80гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_sp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Пена 100гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Пена 180гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Пена 240гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'B6 Светлые Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_Removable_files_on_a_thin_basis[2]
+                    MDTextField:
+                        id: name_inputB6_sp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('B6 Светлые Пена 320гр', app.new_Removable_files_on_a_thin_basis[2], name_inputB6_sp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск S Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[4]
+                    MDTextField:
+                        id: name_inputS_tp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Пена 80гр', app.new_DiskiPena[4], name_inputS_tp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[4]
+                    MDTextField:
+                        id: name_inputS_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Пена 100гр', app.new_DiskiPena[4], name_inputS_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[4]
+                    MDTextField:
+                        id: name_inputS_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Пена 180гр', app.new_DiskiPena[4], name_inputS_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[4]
+                    MDTextField:
+                        id: name_inputS_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Пена 240гр', app.new_DiskiPena[4], name_inputS_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Темные Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[4]
+                    MDTextField:
+                        id: name_inputS_tp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Темные Пена 320гр', app.new_DiskiPena[4], name_inputS_tp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск S Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[1]
+                    MDTextField:
+                        id: name_inputS_sp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Пена 80гр', app.new_DiskiPena[1], name_inputS_sp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[1]
+                    MDTextField:
+                        id: name_inputS_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Пена 100гр', app.new_DiskiPena[1], name_inputS_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[1]
+                    MDTextField:
+                        id: name_inputS_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Пена 180гр', app.new_DiskiPena[1], name_inputS_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[1]
+                    MDTextField:
+                        id: name_inputS_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Пена 240гр', app.new_DiskiPena[1], name_inputS_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'S Светлые Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[1]
+                    MDTextField:
+                        id: name_inputS_sp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('S Светлые Пена 320гр', app.new_DiskiPena[1], name_inputS_sp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск M Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[5]
+                    MDTextField:
+                        id: name_inputM_tp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Пена 80гр', app.new_DiskiPena[5], name_inputM_tp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[5]
+                    MDTextField:
+                        id: name_inputM_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Пена 100гр', app.new_DiskiPena[5], name_inputM_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[5]
+                    MDTextField:
+                        id: name_inputM_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Пена 180гр', app.new_DiskiPena[5], name_inputM_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[5]
+                    MDTextField:
+                        id: name_inputM_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Пена 240гр', app.new_DiskiPena[5], name_inputM_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Темные Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[5]
+                    MDTextField:
+                        id: name_inputM_tp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Темные Пена 320гр', app.new_DiskiPena[5], name_inputM_tp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск M Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[2]
+                    MDTextField:
+                        id: name_inputM_sp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Пена 80гр', app.new_DiskiPena[2], name_inputM_sp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[2]
+                    MDTextField:
+                        id: name_inputM_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Пена 100гр', app.new_DiskiPena[2], name_inputM_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[2]
+                    MDTextField:
+                        id: name_inputM_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Пена 180гр', app.new_DiskiPena[2], name_inputM_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[2]
+                    MDTextField:
+                        id: name_inputM_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Пена 240гр', app.new_DiskiPena[2], name_inputM_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'M Светлые Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[2]
+                    MDTextField:
+                        id: name_inputM_sp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('M Светлые Пена 320гр', app.new_DiskiPena[2], name_inputM_sp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск L Темные файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[3]
+                    MDTextField:
+                        id: name_inputL_tp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Пена 80гр', app.new_DiskiPena[3], name_inputL_tp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[3]
+                    MDTextField:
+                        id: name_inputL_tp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Пена 100гр', app.new_DiskiPena[3], name_inputL_tp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[3]
+                    MDTextField:
+                        id: name_inputL_tp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Пена 180гр', app.new_DiskiPena[3], name_inputL_tp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[3]
+                    MDTextField:
+                        id: name_inputL_tp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Пена 240гр', app.new_DiskiPena[3], name_inputL_tp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Темные Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[3]
+                    MDTextField:
+                        id: name_inputL_tp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Темные Пена 320гр', app.new_DiskiPena[3], name_inputL_tp_320.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '20dp'
+                padding: 2
+                MDLabel:
+                    text: 'Диск L Светлые файлы'
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Пена 80гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[0]
+                    MDTextField:
+                        id: name_inputL_sp_80
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Пена 80гр', app.new_DiskiPena[0], name_inputL_sp_80.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Пена 100гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[0]
+                    MDTextField:
+                        id: name_inputL_sp_100
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Пена 100гр', app.new_DiskiPena[0], name_inputL_sp_100.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Пена 180гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[0]
+                    MDTextField:
+                        id: name_inputL_sp_180
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Пена 180гр', app.new_DiskiPena[0], name_inputL_sp_180.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Пена 240гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[0]
+                    MDTextField:
+                        id: name_inputL_sp_240
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Пена 240гр', app.new_DiskiPena[0], name_inputL_sp_240.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'L Светлые Пена 320гр'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_DiskiPena[0]
+                    MDTextField:
+                        id: name_inputL_sp_320
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('L Светлые Пена 320гр', app.new_DiskiPena[0], name_inputL_sp_320.text)
+
+<Other@Popup>
+    auto_dismiss: True
+    title: 'Прочее'
+
+    background_normal: ""
+    background_color: (26/255, 149/255, 184/255, .9)
+
+    ScrollView:
+        size: self.size
+
+        GridLayout:
+
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+
+            cols: 1
+            spacing: 5
+
+            size: root.width, root.height
+
+            MDRaisedButton:
+                text: 'Закрыть'
+                font_size: 12
+                on_release: root.dismiss()
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Мешок-пылесборник'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_OtherPrice[0]
+                    MDTextField:
+                        id: name_Meshok
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Мешок-пылесборник', app.new_OtherPrice[0], name_Meshok.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Пылесос'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_OtherPrice[1]
+                    MDTextField:
+                        id: name_Pilesos
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Пылесос', app.new_OtherPrice[1], name_Pilesos.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Набор мастера'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_OtherPrice[2]
+                    MDTextField:
+                        id: name_Nabor
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Набор мастера', app.new_OtherPrice[2],  name_Nabor.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Палитра'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_OtherPrice[3]
+                    MDTextField:
+                        id: name_Palitra
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Палитра', app.new_OtherPrice[3], name_Palitra.text)
+
+            MDCard:
+                size_hint: None, None
+                size: '2000dp', '150dp'
+                padding: 2
+                MDGridLayout:
+                    cols: 1
+                    MDLabel:
+                        text: f'Шпатель'
+                    MDLabel:
+                        text: 'Цена ₽: ' + app.new_OtherPrice[4]
+                    MDTextField:
+                        id: name_Shpatel
+                        mode: "rectangle"
+                        hint_text: "кол-во"
+                    MDRaisedButton:
+                        text: '+'
+                        on_press:
+                            app.add_item('Шпатель', app.new_OtherPrice[4], name_Shpatel.text)
+
+BoxLayout:
+    orientation: 'vertical'
+
+    MDToolbar:
+        title: 'ABT-Professional'
+
+    MDBottomNavigation:
+
+            #Нижння часть эакрана "Главная"
+        MDBottomNavigationItem:
+            name: 'Items'
+            text: 'Главная'
+            icon: 'home'
+
+            FitImage:
+                source: 'image/fon-2-sekcii-1.jpg'
+
+            ScrollView:
+                size: self.size
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    pos_hint: {'center_y':0.5}
+                    adaptive_height: True
+                    spacing: 2
+                    padding: 30
+
+                    MDRaisedButton:
+                        text: 'Основы'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.Bases().open()
+
+                    MDRaisedButton:
+                        text: 'Файлы тонкая основа'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.Files().open()
+
+                    MDRaisedButton:
+                        text: 'Файлы педикюр тонкая основа'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.PedicureFiles().open()
+
+                    MDRaisedButton:
+                        text: 'Файлы вспененная основа'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.FilesPena().open()
+
+                    MDRaisedButton:
+                        text: 'Файлы педикюр вспененная основа'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.PedicureFilesPena().open()
+
+                    MDRaisedButton:
+                        text: 'Бафы'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.Bafi().open()
+
+                    MDRaisedButton:
+                        text: 'Другое'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_release: Factory.Other().open()
+
+                    MDRaisedButton:
+                        text: 'Очистить корзину'
+                        pos_hint: {"center_x":.5}
+                        width: dp(250) + (self.ids.lbl_txt.texture_size[0] - self.ids.lbl_txt.texture_size[0])
+                        on_press: app.clearBasket()
+                        md_bg_color : [1,0,0,1]
+
+
+
+        #Нижняя часть главного экрана "Корзина"
+        MDBottomNavigationItem:
+            name: 'Basket'
+            text: 'Корзина'
+            icon: 'basket'
+
+            FitImage:
+                source: 'image/fon-2-sekcii-1.jpg'
+
+            ScrollView:
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: self.minimum_height
+                    center: root.width / 1, root.height / 1
+                    id: basketItems
+                    spacing: 4
+
+        MDBottomNavigationItem:
+            name: 'Send'
+            text: 'Отправить'
+            icon: 'email'
+
+            FitImage:
+                source: 'image/fon-2-sekcii-1.jpg'
+
+            ScrollView:
+                size: self.size
+
+                GridLayout:
+                    size_hint_y: None
+                    height: self.minimum_height
+                    width: self.minimum_width
+
+                    cols: 1
+                    spacing: 2
+
+                    size: root.width * 0.1, root.height * 0.1
+
+                    MDCard:
+                        size_hint: None, None
+                        size: '2000dp', '70dp'
+                        padding: 2
+                        MDGridLayout:
+                            cols: 1
+                            MDLabel:
+                                text: 'Итоговая цена:'
+
+                            MDLabel:
+                                id: name_mdlabel
+                                text: '0'
+
+                    MDCard:
+                        size_hint: None, None
+                        size: '2000dp', '70dp'
+                        padding: 2
+                        MDGridLayout:
+                            cols: 1
+                            MDLabel:
+                                text: 'ФИО:'
+
+                            MDTextField:
+                                id: FIO
+                                hint_text: "Введите ФИО"
+
+                    MDCard:
+                        size_hint: None, None
+                        size: '2000dp', '70dp'
+                        padding: 2
+                        MDGridLayout:
+                            cols: 1
+                            MDLabel:
+                                text: 'Номер телефона:'
+
+                            MDTextField:
+                                id: nubmer_phone
+                                hint_text: "Введите номер"
+
+                    MDCard:
+                        size_hint: None, None
+                        size: '2000dp', '100dp'
+                        padding: 2
+                        MDGridLayout:
+                            cols: 1
+                            MDLabel:
+                                text: 'Номер договора'
+                            MDLabel:
+                                text: '(если есть):'
+                            MDTextField:
+                                id: number_contract
+                                hint_text: 'Введите номер договора'
+                                size_hint_x: None
+
+                    MDCard:
+                        size_hint: None, None
+                        size: '150dp', '50dp'
+                        padding: 2
+                        Button:
+                            text: 'Отправить заказ'
+                            pos_hint: {"center_x":.5}
+                            background_normal: ''
+                            background_color: (1, 0, 0, 1)
+                            on_press:
+                                app.send_email(FIO.text, nubmer_phone.text, number_contract.text)
